@@ -115,13 +115,13 @@
     ],
     "platforms": "桌面 / 浏览器",
     "description": "字节跳动的多模态 Agent 项目，包含桌面操作应用与 Agent TARS 工具链。",
-    "note": "本地、远程和浏览器模式的要求不同；模型需要另行配置。",
-    "status": "项目",
+    "note": "本地、远程和浏览器模式的要求不同；模型需要另行配置。上游仓库已于 GitHub 归档，不再维护。",
+    "status": "已归档",
     "license": "Apache-2.0",
     "sources": [
       "https://github.com/bytedance/UI-TARS-desktop/blob/main/README.md"
     ],
-    "checked_at": "2026-11-06",
+    "checked_at": "2026-11-14",
     "verification": "upstream-docs"
   },
   {
@@ -2165,6 +2165,107 @@
       "https://github.com/vostride/agent-qa/blob/main/LICENSE.md"
     ],
     "checked_at": "2026-11-07",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "AutoCua",
+    "category": "desktop",
+    "repository": "ComputerUseAgent/AutoCua",
+    "github": "https://github.com/ComputerUseAgent/AutoCua",
+    "interfaces": [
+      "Python SDK",
+      "Browser extension"
+    ],
+    "platforms": "macOS / Windows / Linux；iOS（需 macOS 主机）/ Android",
+    "description": "一个 Python 库驱动多种界面：用 mode 参数在桌面、浏览器（自家扩展驱动本机 Chrome）、终端编码和 iOS / Android 手机之间切换。",
+    "note": "需自行配置模型供应商（如 OpenRouter）；手机操作需模拟器或 USB / Wi-Fi 连接真机。",
+    "status": "项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/ComputerUseAgent/AutoCua/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-14",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "OpenGCUA",
+    "category": "harness",
+    "repository": "Tongyi-MAI/OpenGCUA",
+    "github": "https://github.com/Tongyi-MAI/OpenGCUA",
+    "interfaces": [
+      "SDK",
+      "macOS menu-bar app"
+    ],
+    "platforms": "macOS（真机 harness）/ OSWorld",
+    "description": "通义实验室开放的通用 Computer-Use Agent 研究栈：把 GUI 操作写成代码并与辅助功能树、应用 API、Shell 组合，附 OSWorld 集成示例、8 个前沿模型的评测轨迹和跨设备 SDK。",
+    "note": "2026-10 研究预览；macOS harness 与 Cross-Device SDK 标注为初步版本，GCUA 模型尚未发布。",
+    "status": "研究项目",
+    "license": "Apache-2.0",
+    "sources": [
+      "https://github.com/Tongyi-MAI/OpenGCUA/blob/main/README.md",
+      "https://arxiv.org/abs/2610.22200"
+    ],
+    "checked_at": "2026-11-14",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "Comma",
+    "category": "workflow",
+    "repository": "AFK-surf/Comma",
+    "github": "https://github.com/AFK-surf/Comma",
+    "interfaces": [
+      "Web",
+      "Workers"
+    ],
+    "platforms": "自托管 / 托管服务 comma.surf",
+    "description": "常驻运行的个人 Agent：把请求拆成持续执行的 Task，在浏览器、电脑操作、文件与远程设备间循环执行并自检，可把 Codex、Claude Code 注册为 Worker。",
+    "note": "官方同时提供托管服务；自托管部署需自行准备环境。",
+    "status": "项目",
+    "license": "AGPL-3.0",
+    "sources": [
+      "https://github.com/AFK-surf/Comma/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-14",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "huashu-mac-use",
+    "category": "desktop",
+    "repository": "alchaincyf/huashu-mac-use",
+    "github": "https://github.com/alchaincyf/huashu-mac-use",
+    "interfaces": [
+      "Agent Skill",
+      "CLI"
+    ],
+    "platforms": "macOS",
+    "description": "让 Agent 操控 Mac 上没有 API 的原生应用：优先走应用自带命令行或内嵌 Chromium 的 CDP，必要时才操作界面，后台截图不抢焦点，每一步留取证截图。",
+    "note": "需给终端授予屏幕录制与辅助功能权限，首次使用编译 Swift 内核；推荐配合 agent-desktop。",
+    "status": "社区项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/alchaincyf/huashu-mac-use/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-14",
+    "verification": "upstream-docs"
+  },
+  {
+    "name": "arc-cua",
+    "category": "desktop",
+    "repository": "shhivv/arc-cua",
+    "github": "https://github.com/shhivv/arc-cua",
+    "interfaces": [
+      "MCP",
+      "Python SDK"
+    ],
+    "platforms": "macOS",
+    "description": "两件工具：arc-driver 在后台读取并操作 macOS 应用窗口（不移动用户指针、支持最小化窗口），以 MCP 提供给 Claude Code 等；arc-cua 把有边界的桌面子任务交给快速决策模型执行。",
+    "note": "arc-driver 不需要模型或 API Key；arc-cua 循环需要决策模型供应商。",
+    "status": "社区项目",
+    "license": "MIT",
+    "sources": [
+      "https://github.com/shhivv/arc-cua/blob/master/README.md"
+    ],
+    "checked_at": "2026-11-14",
     "verification": "upstream-docs"
   }
 ]

@@ -7,7 +7,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 
 [选型指南](docs/guide.md) · [远程自动化方案](docs/remote-automation.md) · [官方文档与博文](docs/reading.md) · [贡献项目](CONTRIBUTING.md) · [JSON 数据](data/projects.json)
 
-收录 **106 个项目与组件 / 103 个 GitHub 仓库 / 12 个分类**。最近整理：**2026-11-07**。以 GitHub 上游仓库为主，补充必要的官方产品文档和技术文章。
+收录 **111 个项目与组件 / 108 个 GitHub 仓库 / 12 个分类**。最近整理：**2026-11-14**。以 GitHub 上游仓库为主，补充必要的官方产品文档和技术文章。
 
 **GitHub Stars 使用 [Shields.io 动态徽章](https://shields.io/badges/git-hub-repo-stars)**，点击徽章查看仓库 Star 页面；数值自动更新，可能有缓存延迟。各分类按最近整理时的 Star 数据排序，顺序不随徽章自动变化。同一仓库的组件共享仓库 Star 数，Star 反映关注度，不代表实测质量。
 
@@ -35,16 +35,16 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 
 ## 目录
 
-- [桌面操作与 Computer Use](#desktop)（11）
+- [桌面操作与 Computer Use](#desktop)（14）
 - [浏览器与网页自动化](#browser)（17）
-- [编码 Agent 与通用 Harness](#harness)（15）
+- [编码 Agent 与通用 Harness](#harness)（16）
 - [Agent 配套：模型、记忆与多会话](#tooling)（9）
 - [DeepSeek 与 Claude Code 桥接](#dsh)（5）
 - [适合 Agent 调用的 CLI](#cli)（12）
 - [虚拟电脑与隔离环境](#sandbox)（8）
 - [远程控制与自动化](#remote)（11）
 - [手机与模拟器自动化](#mobile)（7）
-- [工作流与持续自动化](#workflow)（6）
+- [工作流与持续自动化](#workflow)（7）
 - [系统脚本与传统自动化](#scripting)（3）
 - [评测与研究环境](#benchmark)（2）
 - [官方产品与阅读入口](#official-resources)
@@ -58,17 +58,20 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 
 | 项目 | Stars | 接口 / 平台 | 适用场景 | 状态与边界 |
 | --- | ---: | --- | --- | --- |
-| [UI-TARS Desktop / Agent TARS](https://github.com/bytedance/UI-TARS-desktop) | [![GitHub Stars](https://img.shields.io/github/stars/bytedance/UI-TARS-desktop?style=social)](https://github.com/bytedance/UI-TARS-desktop/stargazers) | App、CLI、Web UI；桌面 / 浏览器 | 字节跳动的多模态 Agent 项目，包含桌面操作应用与 Agent TARS 工具链。 | 本地、远程和浏览器模式的要求不同；模型需要另行配置。 |
+| [UI-TARS Desktop / Agent TARS](https://github.com/bytedance/UI-TARS-desktop) | [![GitHub Stars](https://img.shields.io/github/stars/bytedance/UI-TARS-desktop?style=social)](https://github.com/bytedance/UI-TARS-desktop/stargazers) | App、CLI、Web UI；桌面 / 浏览器 | 字节跳动的多模态 Agent 项目，包含桌面操作应用与 Agent TARS 工具链。 | **已归档** · 本地、远程和浏览器模式的要求不同；模型需要另行配置。上游仓库已于 GitHub 归档，不再维护。 |
 | [Cua Driver](https://github.com/trycua/cua/tree/main/libs/cua-driver) | [![GitHub Stars](https://img.shields.io/github/stars/trycua/cua?style=social)](https://github.com/trycua/cua/stargazers) | CLI、MCP、SDK；macOS / Windows / Linux | 为 Agent 提供原生应用、窗口、元素和输入控制接口。 | 与 Cua Spaces 分开选型；后台输入有平台与应用限制。 |
 | [OmniParser / OmniTool](https://github.com/microsoft/OmniParser) | [![GitHub Stars](https://img.shields.io/github/stars/microsoft/OmniParser?style=social)](https://github.com/microsoft/OmniParser/stargazers) | Python、模型；截图解析；Windows VM 示例 | 把界面截图解析为可交互区域，辅助视觉 Agent 定位控件。 | 解析器本身不等于完整 Agent；模型权重与代码许可须分别查看。 |
-| [Claude Computer Use Demo](https://github.com/anthropics/claude-quickstarts/tree/main/computer-use-demo) | [![GitHub Stars](https://img.shields.io/github/stars/anthropics/claude-quickstarts?style=social)](https://github.com/anthropics/claude-quickstarts/stargazers) | Python、Docker；Linux 桌面容器 | Anthropic 官方参考实现，演示截图、动作执行、工具结果与模型循环。 | **官方示例** · 示例工程；需要模型 API 与运行环境。 |
 | [Vercel Agent Desktop](https://github.com/vercel-labs/agent-desktop) | [![GitHub Stars](https://img.shields.io/github/stars/vercel-labs/agent-desktop?style=social)](https://github.com/vercel-labs/agent-desktop/stargazers) | CLI、MCP、C SDK；macOS / Windows / Linux | 通过系统辅助功能树读取桌面、返回元素引用并操作原生应用。 | 不内置模型；后台操作范围取决于应用与平台。 |
+| [Claude Computer Use Demo](https://github.com/anthropics/claude-quickstarts/tree/main/computer-use-demo) | [![GitHub Stars](https://img.shields.io/github/stars/anthropics/claude-quickstarts?style=social)](https://github.com/anthropics/claude-quickstarts/stargazers) | Python、Docker；Linux 桌面容器 | Anthropic 官方参考实现，演示截图、动作执行、工具结果与模型循环。 | **官方示例** · 示例工程；需要模型 API 与运行环境。 |
 | [Agent S](https://github.com/simular-ai/Agent-S) | [![GitHub Stars](https://img.shields.io/github/stars/simular-ai/Agent-S?style=social)](https://github.com/simular-ai/Agent-S/stargazers) | Python、CLI；macOS / Windows / Linux | Simular 的通用电脑操作 Agent 框架，结合任务规划与 GUI 操作。 | 偏研发和实验；不同版本、模型与评测协议不能直接横比。 |
 | [Windows-MCP](https://github.com/CursorTouch/Windows-MCP) | [![GitHub Stars](https://img.shields.io/github/stars/CursorTouch/Windows-MCP?style=social)](https://github.com/CursorTouch/Windows-MCP/stargazers) | MCP；Windows | 通过 Windows UI 状态、键鼠和应用控制，让 Agent 操作本机桌面。 | 视觉模型并非必需；当前 Python 与 Windows 版本要求见安装文档。 |
 | [Microsoft UFO](https://github.com/microsoft/UFO) | [![GitHub Stars](https://img.shields.io/github/stars/microsoft/UFO?style=social)](https://github.com/microsoft/UFO/stargazers) | Python、Agent；Windows；多设备扩展 | 包含 Windows 桌面 AgentOS 与跨设备任务编排，结合 GUI 和应用 API。 | UFO² 与 UFO³ 的目标不同，应按单机或多设备场景选择。 |
 | [Peekaboo](https://github.com/openclaw/Peekaboo) | [![GitHub Stars](https://img.shields.io/github/stars/openclaw/Peekaboo?style=social)](https://github.com/openclaw/Peekaboo/stargazers) | CLI、MCP、App；macOS | 结合截图、辅助功能检查和原生 UI 操作，适合 Mac 桌面自动化。 | 当前发行版要求 macOS 15+；需相应系统权限。 |
 | [Gemini Computer Use Preview](https://github.com/google-gemini/computer-use-preview) | [![GitHub Stars](https://img.shields.io/github/stars/google-gemini/computer-use-preview?style=social)](https://github.com/google-gemini/computer-use-preview/stargazers) | Python、CLI；浏览器 | Google 官方电脑操作示例，以 Playwright 等后端执行模型动作。 | **官方示例** · 预览示例；主要展示浏览器任务，不能据此推断任意桌面应用支持。 |
 | [Open Computer Use](https://github.com/iFurySt/open-computer-use) | [![GitHub Stars](https://img.shields.io/github/stars/iFurySt/open-computer-use?style=social)](https://github.com/iFurySt/open-computer-use/stargazers) | CLI、MCP、Skill；macOS / Windows / Linux | 把桌面观察与操作封装为 MCP 服务，可接入 Codex、Claude Code 等。 | 社区实现；平台支持细节和系统权限见上游。 |
+| [AutoCua](https://github.com/ComputerUseAgent/AutoCua) | [![GitHub Stars](https://img.shields.io/github/stars/ComputerUseAgent/AutoCua?style=social)](https://github.com/ComputerUseAgent/AutoCua/stargazers) | Python SDK、Browser extension；macOS / Windows / Linux；iOS（需 macOS 主机）/ Android | 一个 Python 库驱动多种界面：用 mode 参数在桌面、浏览器（自家扩展驱动本机 Chrome）、终端编码和 iOS / Android 手机之间切换。 | 需自行配置模型供应商（如 OpenRouter）；手机操作需模拟器或 USB / Wi-Fi 连接真机。 |
+| [huashu-mac-use](https://github.com/alchaincyf/huashu-mac-use) | [![GitHub Stars](https://img.shields.io/github/stars/alchaincyf/huashu-mac-use?style=social)](https://github.com/alchaincyf/huashu-mac-use/stargazers) | Agent Skill、CLI；macOS | 让 Agent 操控 Mac 上没有 API 的原生应用：优先走应用自带命令行或内嵌 Chromium 的 CDP，必要时才操作界面，后台截图不抢焦点，每一步留取证截图。 | **社区项目** · 需给终端授予屏幕录制与辅助功能权限，首次使用编译 Swift 内核；推荐配合 agent-desktop。 |
+| [arc-cua](https://github.com/shhivv/arc-cua) | [![GitHub Stars](https://img.shields.io/github/stars/shhivv/arc-cua?style=social)](https://github.com/shhivv/arc-cua/stargazers) | MCP、Python SDK；macOS | 两件工具：arc-driver 在后台读取并操作 macOS 应用窗口（不移动用户指针、支持最小化窗口），以 MCP 提供给 Claude Code 等；arc-cua 把有边界的桌面子任务交给快速决策模型执行。 | **社区项目** · arc-driver 不需要模型或 API Key；arc-cua 循环需要决策模型供应商。 |
 
 <a id="browser"></a>
 
@@ -119,6 +122,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 | [nanobot](https://github.com/HKUDS/nanobot) | [![GitHub Stars](https://img.shields.io/github/stars/HKUDS/nanobot?style=social)](https://github.com/HKUDS/nanobot/stargazers) | Python、CLI、Web UI、Gateway；本地 / 自托管服务器 | 轻量个人 Agent，通过聊天渠道操作文件、保存记忆并调度任务。 | 适合个人远程助手；能力依赖模型与已配置工具。 |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [![GitHub Stars](https://img.shields.io/github/stars/QwenLM/qwen-code?style=social)](https://github.com/QwenLM/qwen-code/stargazers) | CLI、MCP；本地开发环境 | Qwen 的开源终端编码 Agent，用于代码修改和工具驱动的任务流程。 | GUI 操作需要额外执行工具。 |
 | [Claude Agent SDK（Python）](https://github.com/anthropics/claude-agent-sdk-python) | [![GitHub Stars](https://img.shields.io/github/stars/anthropics/claude-agent-sdk-python?style=social)](https://github.com/anthropics/claude-agent-sdk-python/stargazers) | Python SDK；Python 环境 | 把 Claude Code 的 Agent 循环和工具能力嵌入应用与自动化服务。 | SDK 许可与随附 Claude Code 运行时条款分开看。 |
+| [OpenGCUA](https://github.com/Tongyi-MAI/OpenGCUA) | [![GitHub Stars](https://img.shields.io/github/stars/Tongyi-MAI/OpenGCUA?style=social)](https://github.com/Tongyi-MAI/OpenGCUA/stargazers) | SDK、macOS menu-bar app；macOS（真机 harness）/ OSWorld | 通义实验室开放的通用 Computer-Use Agent 研究栈：把 GUI 操作写成代码并与辅助功能树、应用 API、Shell 组合，附 OSWorld 集成示例、8 个前沿模型的评测轨迹和跨设备 SDK。 | **研究项目** · 2026-10 研究预览；macOS harness 与 Cross-Device SDK 标注为初步版本，GCUA 模型尚未发布。 |
 
 <a id="tooling"></a>
 
@@ -240,6 +244,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 | [Claude Code Action](https://github.com/anthropics/claude-code-action) | [![GitHub Stars](https://img.shields.io/github/stars/anthropics/claude-code-action?style=social)](https://github.com/anthropics/claude-code-action/stargazers) | GitHub Actions；CI | 让 Claude Code 处理 Issue、PR 问答、代码变更和审查任务。 | 按事件设置触发范围与工具权限。 |
 | [GitHub Agentic Workflows](https://github.com/github/gh-aw) | [![GitHub Stars](https://img.shields.io/github/stars/github/gh-aw?style=social)](https://github.com/github/gh-aw/stargazers) | gh 扩展、Markdown、Actions；GitHub Actions | 把带 YAML 配置的 Markdown 任务编译成 Agent 工作流，执行仓库维护与分析。 | 模型执行、确定性 CI 和写入结果各有不同职责。 |
 | [Codex GitHub Action](https://github.com/openai/codex-action) | [![GitHub Stars](https://img.shields.io/github/stars/openai/codex-action?style=social)](https://github.com/openai/codex-action/stargazers) | GitHub Actions；CI | 将 Codex 任务接入 PR、Issue 或代码流水线。 | Action 需要配置模型认证及工作流权限；不是桌面定时任务。 |
+| [Comma](https://github.com/AFK-surf/Comma) | [![GitHub Stars](https://img.shields.io/github/stars/AFK-surf/Comma?style=social)](https://github.com/AFK-surf/Comma/stargazers) | Web、Workers；自托管 / 托管服务 comma.surf | 常驻运行的个人 Agent：把请求拆成持续执行的 Task，在浏览器、电脑操作、文件与远程设备间循环执行并自检，可把 Codex、Claude Code 注册为 Worker。 | 官方同时提供托管服务；自托管部署需自行准备环境。 |
 
 <a id="scripting"></a>
 
