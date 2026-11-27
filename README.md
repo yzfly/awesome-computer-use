@@ -7,7 +7,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 
 [选型指南](docs/guide.md) · [远程自动化方案](docs/remote-automation.md) · [官方文档与博文](docs/reading.md) · [贡献项目](CONTRIBUTING.md) · [JSON 数据](data/projects.json)
 
-收录 **111 个项目与组件 / 108 个 GitHub 仓库 / 12 个分类**。最近整理：**2026-11-14**。以 GitHub 上游仓库为主，补充必要的官方产品文档和技术文章。
+收录 **112 个项目与组件 / 109 个 GitHub 仓库 / 12 个分类**。最近整理：**2026-11-28**。以 GitHub 上游仓库为主，补充必要的官方产品文档和技术文章。
 
 **GitHub Stars 使用 [Shields.io 动态徽章](https://shields.io/badges/git-hub-repo-stars)**，点击徽章查看仓库 Star 页面；数值自动更新，可能有缓存延迟。各分类按最近整理时的 Star 数据排序，顺序不随徽章自动变化。同一仓库的组件共享仓库 Star 数，Star 反映关注度，不代表实测质量。
 
@@ -41,7 +41,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 - [Agent 配套：模型、记忆与多会话](#tooling)（9）
 - [DeepSeek 与 Claude Code 桥接](#dsh)（5）
 - [适合 Agent 调用的 CLI](#cli)（12）
-- [虚拟电脑与隔离环境](#sandbox)（8）
+- [虚拟电脑与隔离环境](#sandbox)（9）
 - [远程控制与自动化](#remote)（11）
 - [手机与模拟器自动化](#mobile)（7）
 - [工作流与持续自动化](#workflow)（7）
@@ -60,8 +60,8 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 | --- | ---: | --- | --- | --- |
 | [UI-TARS Desktop / Agent TARS](https://github.com/bytedance/UI-TARS-desktop) | [![GitHub Stars](https://img.shields.io/github/stars/bytedance/UI-TARS-desktop?style=social)](https://github.com/bytedance/UI-TARS-desktop/stargazers) | App、CLI、Web UI；桌面 / 浏览器 | 字节跳动的多模态 Agent 项目，包含桌面操作应用与 Agent TARS 工具链。 | **已归档** · 本地、远程和浏览器模式的要求不同；模型需要另行配置。上游仓库已于 GitHub 归档，不再维护。 |
 | [Cua Driver](https://github.com/trycua/cua/tree/main/libs/cua-driver) | [![GitHub Stars](https://img.shields.io/github/stars/trycua/cua?style=social)](https://github.com/trycua/cua/stargazers) | CLI、MCP、SDK；macOS / Windows / Linux | 为 Agent 提供原生应用、窗口、元素和输入控制接口。 | 与 Cua Spaces 分开选型；后台输入有平台与应用限制。 |
-| [OmniParser / OmniTool](https://github.com/microsoft/OmniParser) | [![GitHub Stars](https://img.shields.io/github/stars/microsoft/OmniParser?style=social)](https://github.com/microsoft/OmniParser/stargazers) | Python、模型；截图解析；Windows VM 示例 | 把界面截图解析为可交互区域，辅助视觉 Agent 定位控件。 | 解析器本身不等于完整 Agent；模型权重与代码许可须分别查看。 |
 | [Vercel Agent Desktop](https://github.com/vercel-labs/agent-desktop) | [![GitHub Stars](https://img.shields.io/github/stars/vercel-labs/agent-desktop?style=social)](https://github.com/vercel-labs/agent-desktop/stargazers) | CLI、MCP、C SDK；macOS / Windows / Linux | 通过系统辅助功能树读取桌面、返回元素引用并操作原生应用。 | 不内置模型；后台操作范围取决于应用与平台。 |
+| [OmniParser / OmniTool](https://github.com/microsoft/OmniParser) | [![GitHub Stars](https://img.shields.io/github/stars/microsoft/OmniParser?style=social)](https://github.com/microsoft/OmniParser/stargazers) | Python、模型；截图解析；Windows VM 示例 | 把界面截图解析为可交互区域，辅助视觉 Agent 定位控件。 | 解析器本身不等于完整 Agent；模型权重与代码许可须分别查看。 |
 | [Claude Computer Use Demo](https://github.com/anthropics/claude-quickstarts/tree/main/computer-use-demo) | [![GitHub Stars](https://img.shields.io/github/stars/anthropics/claude-quickstarts?style=social)](https://github.com/anthropics/claude-quickstarts/stargazers) | Python、Docker；Linux 桌面容器 | Anthropic 官方参考实现，演示截图、动作执行、工具结果与模型循环。 | **官方示例** · 示例工程；需要模型 API 与运行环境。 |
 | [Agent S](https://github.com/simular-ai/Agent-S) | [![GitHub Stars](https://img.shields.io/github/stars/simular-ai/Agent-S?style=social)](https://github.com/simular-ai/Agent-S/stargazers) | Python、CLI；macOS / Windows / Linux | Simular 的通用电脑操作 Agent 框架，结合任务规划与 GUI 操作。 | 偏研发和实验；不同版本、模型与评测协议不能直接横比。 |
 | [Windows-MCP](https://github.com/CursorTouch/Windows-MCP) | [![GitHub Stars](https://img.shields.io/github/stars/CursorTouch/Windows-MCP?style=social)](https://github.com/CursorTouch/Windows-MCP/stargazers) | MCP；Windows | 通过 Windows UI 状态、键鼠和应用控制，让 Agent 操作本机桌面。 | 视觉模型并非必需；当前 Python 与 Windows 版本要求见安装文档。 |
@@ -92,8 +92,8 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 | [Selenium](https://github.com/SeleniumHQ/selenium) | [![GitHub Stars](https://img.shields.io/github/stars/SeleniumHQ/selenium?style=social)](https://github.com/SeleniumHQ/selenium/stargazers) | WebDriver、SDK；多浏览器 | 跨浏览器自动化生态，适合接入已有测试设施和远程浏览器集群。 | **基础工具** · 已有 WebDriver 流程可作为 Agent 的执行后端。 |
 | [Page Agent](https://github.com/alibaba/page-agent) | [![GitHub Stars](https://img.shields.io/github/stars/alibaba/page-agent?style=social)](https://github.com/alibaba/page-agent/stargazers) | JavaScript、浏览器扩展；网页内部 | 在网页中嵌入自然语言 GUI Agent，适合给已有 Web 产品增加操作助手。 | 网页内能力有明确边界；不等于全系统电脑操作。 |
 | [Stagehand](https://github.com/browserbase/stagehand) | [![GitHub Stars](https://img.shields.io/github/stars/browserbase/stagehand?style=social)](https://github.com/browserbase/stagehand/stargazers) | SDK；浏览器；本地或云端 | 用 act、observe、extract 等接口组织网页操作和结构化信息提取。 | 适合将 AI 动作嵌入代码；需配置模型与浏览器。 |
-| [Skyvern](https://github.com/Skyvern-AI/skyvern) | [![GitHub Stars](https://img.shields.io/github/stars/Skyvern-AI/skyvern?style=social)](https://github.com/Skyvern-AI/skyvern/stargazers) | SDK、API、Web UI；浏览器；自托管或云端 | 结合视觉模型与浏览器操作，编排表单、后台系统等业务流程。 | 自托管软件与商业托管服务分开评估。 |
 | [Ego Lite / ego-browser](https://github.com/citrolabs/ego-lite) | [![GitHub Stars](https://img.shields.io/github/stars/citrolabs/ego-lite?style=social)](https://github.com/citrolabs/ego-lite/stargazers) | Skill、JavaScript、CLI；macOS / Windows | 面向人与 Agent 协作的浏览器；在独立 Space 中使用页面快照、点击与填表。 | 使用 Ego Lite 中的登录状态；公开仓库的许可不代表全部浏览器发行组件。 |
+| [Skyvern](https://github.com/Skyvern-AI/skyvern) | [![GitHub Stars](https://img.shields.io/github/stars/Skyvern-AI/skyvern?style=social)](https://github.com/Skyvern-AI/skyvern/stargazers) | SDK、API、Web UI；浏览器；自托管或云端 | 结合视觉模型与浏览器操作，编排表单、后台系统等业务流程。 | 自托管软件与商业托管服务分开评估。 |
 | [Midscene.js](https://github.com/web-infra-dev/midscene) | [![GitHub Stars](https://img.shields.io/github/stars/web-infra-dev/midscene?style=social)](https://github.com/web-infra-dev/midscene/stargazers) | JavaScript、YAML、CLI；Web / Android / iOS / 桌面 | 用自然语言描述界面操作和断言，执行视觉驱动的端到端测试。 | 不同目标需要对应适配器与运行环境。 |
 | [Playwright CLI](https://github.com/microsoft/playwright-cli) | [![GitHub Stars](https://img.shields.io/github/stars/microsoft/playwright-cli?style=social)](https://github.com/microsoft/playwright-cli/stargazers) | CLI、Skill；macOS / Windows / Linux | 为编码 Agent 提供 Playwright 命令接口，支持页面操作、截图和会话。 | 适合已有 shell 能力的 Agent；与 Playwright MCP 分开使用。 |
 | [BrowserOS](https://github.com/browseros-ai/BrowserOS) | [![GitHub Stars](https://img.shields.io/github/stars/browseros-ai/BrowserOS?style=social)](https://github.com/browseros-ai/BrowserOS/stargazers) | App、MCP；macOS / Windows / Linux | 给外部 Agent 使用的独立浏览器，支持导入登录状态、并行标签和操作回放。 | 核验时主推 BrowserOS neo；需区分新旧产品文档。 |
@@ -193,6 +193,7 @@ A curated, Chinese-first collection of computer-use agents, browser automation, 
 | [Terminal Mac](https://github.com/govijr/terminal-mac) | [![GitHub Stars](https://img.shields.io/github/stars/govijr/terminal-mac?style=social)](https://github.com/govijr/terminal-mac/stargazers) | CLI、MCP、Skill；Apple Silicon；macOS 14+ | 在终端查看、控制独立 macOS 虚拟机，给电脑操作 Agent 一个隔离桌面。 | **早期候选版** · 客体需首次设置，不继承宿主应用和登录会话；上游仍待干净机器实时验收。 |
 | [E2B Desktop Sandbox](https://github.com/e2b-dev/desktop) | [![GitHub Stars](https://img.shields.io/github/stars/e2b-dev/desktop?style=social)](https://github.com/e2b-dev/desktop/stargazers) | Python、JavaScript SDK；Linux 云桌面 | 提供可编程隔离桌面、截图、键鼠和流式查看，用作 Agent 执行环境。 | 此仓库保留模板和示例；Desktop SDK 已迁入 e2b-dev/E2B。 |
 | [AI SDK Computer Use Demo](https://github.com/vercel-labs/ai-sdk-computer-use) | [![GitHub Stars](https://img.shields.io/github/stars/vercel-labs/ai-sdk-computer-use?style=social)](https://github.com/vercel-labs/ai-sdk-computer-use/stargazers) | Next.js、AI SDK；Vercel Sandbox | Vercel 官方演示，把模型工具调用、远程桌面与 VNC 展示连成应用。 | **官方示例** · Demo 与 Agent Desktop 不同；需要模型与 Sandbox 服务配置。 |
+| [Sandscale](https://github.com/sandscale/sandscale-js) | [![GitHub Stars](https://img.shields.io/github/stars/sandscale/sandscale-js?style=social)](https://github.com/sandscale/sandscale-js/stargazers) | TypeScript SDK、CLI、远程 MCP、HTTP API；云端 Firecracker microVM；目前为美国区域 | 托管的 Firecracker microVM 沙箱与云工作区，供编码 Agent 运行命令、上传下载文件、快照与恢复。 | **商业服务** · 商业托管服务，有免费套餐；仓库是 TypeScript SDK，不是服务本身。文档以命令、文件与快照接口为主，未提到远程桌面。新项目，Star 少。 |
 
 <a id="remote"></a>
 

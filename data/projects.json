@@ -2145,6 +2145,30 @@
     "verification": "upstream-docs"
   },
   {
+    "name": "Sandscale",
+    "category": "sandbox",
+    "repository": "sandscale/sandscale-js",
+    "github": "https://github.com/sandscale/sandscale-js",
+    "interfaces": [
+      "TypeScript SDK",
+      "CLI",
+      "远程 MCP",
+      "HTTP API"
+    ],
+    "platforms": "云端 Firecracker microVM；目前为美国区域",
+    "description": "托管的 Firecracker microVM 沙箱与云工作区，供编码 Agent 运行命令、上传下载文件、快照与恢复。",
+    "note": "商业托管服务，有免费套餐；仓库是 TypeScript SDK，不是服务本身。文档以命令、文件与快照接口为主，未提到远程桌面。新项目，Star 少。",
+    "status": "商业服务",
+    "license": "SDK 为 Apache-2.0；托管服务为商业服务",
+    "sources": [
+      "https://sandscale.dev/docs/concepts/sandboxes",
+      "https://sandscale.dev/pricing",
+      "https://github.com/sandscale/sandscale-js/blob/main/README.md"
+    ],
+    "checked_at": "2026-11-28",
+    "verification": "upstream-docs"
+  },
+  {
     "name": "agent-qa",
     "category": "mobile",
     "repository": "vostride/agent-qa",
